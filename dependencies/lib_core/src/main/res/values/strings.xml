@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">lib_core</string>
+
+    <!-- 默认文本填充数据 -->
+    <string name="test_string">\u3000\u3000 </string> <!-- \u3000\u3000 _-->
+    <string name="test_string_short">\u3000\u3000</string>
+    <string name="test_string_long">\u3000\u3000</string>
+    <string name="test_string_long_indent">\u3000\u3000</string> <!-- 缩进两个全角 -->
+    <string name="test_time">\u3000\u3000</string>
+    <string name="test_date">\u3000\u3000</string>
+    
+    <!-- 空字符 -->
+    <string name="string_empty">&#160;</string>
+</resources>

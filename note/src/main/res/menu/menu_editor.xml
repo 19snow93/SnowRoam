@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_undo"
+        android:icon="@mipmap/ic_action_undo"
+        android:title="@string/action_undo"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/action_redo"
+        android:icon="@mipmap/ic_action_redo"
+        android:title="@string/action_redo"
+        app:showAsAction="always"
+        />
+
+
+    <item
+        android:id="@+id/action_markdown"
+        android:title="Markdown模式"
+        android:icon="@mipmap/ic_action_expand"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@mipmap/ic_action_save"
+        android:title="@string/action_save"
+        app:showAsAction="always"
+        />
+
+    <group
+        android:id="@+id/action_editor_more"
+        android:visible="true"
+        >
+        <item
+            android:id="@+id/action_delete"
+            android:title="删除"
+            android:icon="@mipmap/ic_action_delete"
+            app:showAsAction="ifRoom" />
+
+    </group>
+</menu>

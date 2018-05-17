@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 时间相关 -->
+    <string name="early_morning">凌晨</string>
+    <string name="morning">早上</string>
+    <string name="later_morning">上午</string>
+    <string name="afternoon">下午</string>
+    <string name="evening">晚上</string>
+    <string name="yesterday">昨天</string>
+    <string name="Sun">周日</string>
+    <string name="Mon">周一</string>
+    <string name="Tues">周二</string>
+    <string name="Wed">周三</string>
+    <string name="Thur">周四</string>
+    <string name="Fri">周五</string>
+    <string name="Sat">周六</string>
+</resources>

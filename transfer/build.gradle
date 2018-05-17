@@ -1,0 +1,21 @@
+if (!rootProject.ext.moduleSetting.runApp && rootProject.ext.moduleSetting.runAsApp_transfer) {
+    apply plugin: "com.android.application"
+} else {
+    apply plugin: 'com.android.library'
+}
+
+apply from: "$rootProject.projectDir/config_module.gradle"
+
+android {
+    defaultConfig {
+        if (!rootProject.ext.moduleSetting.runApp && rootProject.ext.moduleSetting.runAsApp_transfer) {
+            applicationIdSuffix = '.transfer'
+        }
+    }
+
+}
+
+
+dependencies {
+    api project(':lib_mid')
+}

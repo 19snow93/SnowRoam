@@ -1,0 +1,9 @@
+include  ':app',
+        ':transfer',
+        ':note',
+        ':lib_mid',
+        ':lib_core'
+
+project(':lib_core').projectDir = new File('dependencies/lib_core')
+project(':lib_mid').projectDir = new File('dependencies/lib_mid')
+

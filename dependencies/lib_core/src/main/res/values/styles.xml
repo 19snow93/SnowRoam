@@ -1,0 +1,141 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentDark">@color/colorAccent</item>
+
+        <item name="android:actionMenuTextColor">@drawable/selector_menu_text_color</item>
+        <item name="actionMenuTextColor">@drawable/selector_menu_text_color</item>
+        <item name="actionOverflowMenuStyle">@style/ToolbarOverflow</item>
+        <item name="popupTheme">@style/ToolbarPopup</item>
+        <item name="android:dropDownListViewStyle">@style/ToolbarPopup</item>
+    </style>
+
+
+    <!-- 设置无标题 -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Activity 透明主题 -->
+    <style name="Translucent" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--解决Toolbar左边留有空白的问题-->
+    <style name="ToolBar_Style" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dip</item>
+        <item name="contentInsetStartWithNavigation">0dip</item>
+        <item name="contentInsetEnd">0dip</item>
+    </style>
+
+    <!-- toolbar 样式 -->
+    <style name="ToolbarOverflow" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Required for pre-Lollipop. -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">-4.0dip</item>
+    </style>
+
+    <style name="ToolbarPopup" parent="@android:style/Widget.Holo.ListPopupWindow">  <!--ThemeOverlay.AppCompat.Light-->
+        <item name="android:popupBackground">#AF0000</item>
+        <item name="android:colorActivatedHighlight">@color/grey_200</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">5dp</item>
+        <item name="android:divider">@color/grey_200</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+
+    <!-- start application theme. 去除掉启动 app 时的灰色页面 -->
+    <style name="AppThemeStart" parent="AppTheme.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">?android:windowNoTitle</item>
+    </style>
+
+    <!-- 通用的recycleView style -->
+    <style name="recycleView_style_common" parent="">
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <!-- 透明弹出窗口 -->
+    <style name="dialog_transparent" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@drawable/bg_dialog_common</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+
+    <!-- 通用弹出窗口 -->
+    <style name="dialog_common" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@drawable/bg_dialog_common</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+
+    <!-- 进度条 -->
+    <style name="video_progressbar_style">
+        <item name="android:maxWidth">43.0dip</item>
+        <item name="android:maxHeight">43.0dip</item>
+        <item name="android:indeterminateDrawable">@anim/rotate_loading</item>
+        <item name="android:minWidth">43.0dip</item>
+        <item name="android:minHeight">43.0dip</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- 从下而上弹出 -->
+    <style name="popupWindow_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_bottom</item>
+    </style>
+
+    <!-- 从上而下弹出 -->
+    <style name="popupWindow_animation_top2bottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_from_top</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_top</item>
+    </style>
+
+    <!-- 渐变弹出 -->
+    <style name="popupWindow_animation_alpha" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
+
+
+    <!-- 缩放弹出 -->
+    <style name="window_anima_scale" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_scale_out</item>
+    </style>
+
+
+    <!-- 向右箭头 -->
+    <style name="icon_arrow">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:src">@mipmap/icon_arrow</item>
+    </style>
+
+</resources>

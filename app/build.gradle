@@ -1,0 +1,12 @@
+apply plugin: "com.android.application"
+
+apply from: "$rootProject.projectDir/config_module.gradle"
+
+dependencies {
+    if (rootProject.ext.moduleSetting.runApp) {
+        api project(":note")
+        api project(":transfer")
+    } else {
+        api project(":lib_mid")
+    }
+}

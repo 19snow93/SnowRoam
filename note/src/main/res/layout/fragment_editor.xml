@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.rhythm7.snowroam.widget.edit.UndoableEditText
+        android:id="@+id/_et_content"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="top"
+        android:hint="@string/tx_note_content"
+        android:inputType="textMultiLine|textLongMessage"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:scrollHorizontally="false"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:minHeight="@dimen/dp_200"
+        />
+
+</android.support.v4.widget.NestedScrollView>

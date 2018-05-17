@@ -1,0 +1,7 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootProject.projectDir/config_module.gradle"
+
+dependencies {
+    api project(':lib_core')
+}
