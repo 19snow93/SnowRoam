@@ -29,11 +29,11 @@ class Note {
 
     var content: String? = null //笔记内容
 
-    var createTime: Date? = null //创建时间
+    var createTime: Date? = Date(System.currentTimeMillis()) //创建时间
 
-    var lastUpdateTime: Date? = null //修改时间
+    var lastUpdateTime: Date? = Date(System.currentTimeMillis()) //修改时间
 
-    var status: Int? = null //状态
+    var status: Int? = 1 //状态
 
     var categoryId: Long? = 1 //分类
 }

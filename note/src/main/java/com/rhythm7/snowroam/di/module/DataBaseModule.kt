@@ -10,6 +10,7 @@ import com.rhythm7.snowroam.data.category.CategoryDao
 import com.rhythm7.snowroam.data.note.NoteDao
 import dagger.Module
 import dagger.Provides
+import java.sql.Date
 
 /**
  * Created by Jaminchanks on 2018-05-07.
@@ -23,9 +24,12 @@ class DataBaseModule {
                 .addCallback(object : RoomDatabase.Callback(){
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
-                        val insertCategorySQL = "INSERT INTO category VALUES (1, '未分类')"
-                        db.execSQL(insertCategorySQL)
-                        Logger.i("插入默认数据")
+                        try {
+                            db.execSQL("INSERT INTO category VALUES (1, '未分类');")
+                            db.execSQL("INSERT INTO note VALUES(1, '示例','示例','示例',NULL, NULL, 1, 1);")
+                        } catch (ex: Exception) {
+                            Logger.e("插入默认数据失败")
+                        }
                     }
                 })
                 .build()

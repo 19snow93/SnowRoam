@@ -52,12 +52,14 @@ abstract class NoteDao {
      * 新增笔记并返回该笔记id
      */
     @Transaction
-    public open fun insertOrSaveNote(note: Note): Note {
+    open fun insertOrSaveNote(note: Note): Note {
         if(note.id == null) {
             val maxId = getMaxId()
-            note.id = maxId
+            note.id = maxId?.plus(1)
+            insert(note)
+        } else {
+            update(note)
         }
-        update(note)
 
         return note
     }

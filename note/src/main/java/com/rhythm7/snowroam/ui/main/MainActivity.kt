@@ -80,7 +80,6 @@ class MainActivity : BaseDaggerActivity() {
         _vp_main.addOnPageChangeListener(getPagerChangeAdapter())
 
         addFragment(LeftMenuFragment(), R.id._fragment_container)
-
     }
 
 

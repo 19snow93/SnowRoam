@@ -15,7 +15,7 @@ const val FRAG_TRASH = "/note/home/trash"
 
 const val ACT_EDIT_SOURCE = "/note/editor"
 
-const val FRAG_EDIT_SOURECE = "/note/editor/source"
+const val FRAG_EDIT_SOURCE = "/note/editor/source"
 
 const val PATH_MARKDOWN_PREVIEW = "/note/editor/preview"
 
