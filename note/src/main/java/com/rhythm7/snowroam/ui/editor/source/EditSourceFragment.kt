@@ -11,7 +11,7 @@ import com.rhythm7.core.base.fragment.BaseDaggerFragment
 import com.rhythm7.core.base.mvvm.status.Status
 import com.rhythm7.core.di.module.ViewModelFactory
 import com.rhythm7.mid.args.NOTE_ID
-import com.rhythm7.mid.router.FRAG_EDIT_SOURECE
+import com.rhythm7.mid.router.FRAG_EDIT_SOURCE
 import com.rhythm7.snowroam.R
 import com.rhythm7.snowroam.ui.editor.EditorViewModel
 import kotlinx.android.synthetic.main.fragment_editor.*
@@ -22,15 +22,15 @@ import javax.inject.Inject
  * Created by Jaminchanks on 2018-05-06.
  */
 
-@Route(path = FRAG_EDIT_SOURECE)
+@Route(path = FRAG_EDIT_SOURCE)
 class EditSourceFragment: BaseDaggerFragment(true){
 
     @Inject
     lateinit var mViewModelFactory: ViewModelFactory
     lateinit var mEditorViewModel: EditorViewModel
 
-    @JvmField  @Autowired(name = NOTE_ID)
-    var mNoteId: Long? = 0L
+    @JvmField @Autowired(name = NOTE_ID)
+    var mNoteId: Long? = 0
 
     override fun initViewAndEvent() {
         mEditorViewModel = ViewModelProviders.of(activity!!, mViewModelFactory).get(EditorViewModel::class.java)

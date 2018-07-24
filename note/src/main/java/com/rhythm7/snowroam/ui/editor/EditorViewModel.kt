@@ -5,6 +5,7 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.persistence.room.RoomDatabase
 import com.rhythm7.core.base.mvvm.BaseViewModel
 import com.rhythm7.core.base.mvvm.status.Resource
+import com.rhythm7.core.utlis.Logger
 import com.rhythm7.core.utlis.rx.io_main
 import com.rhythm7.snowroam.data.NoteDatabase
 import com.rhythm7.snowroam.data.note.Note
@@ -30,7 +31,11 @@ class EditorViewModel
         get() = _noteDetail
 
     fun setNoteId(id: Long?) {
-        _noteId.value = id
+        if (id != 0L) {
+            _noteId.value = id
+        } else {
+            _noteId.value = null
+        }
     }
 
     /**
@@ -89,6 +94,7 @@ class EditorViewModel
                     _noteDetail.value = note
                     result.value = Resource.success(null)
                 }, {
+                    Logger.e(it)
                     result.value = Resource.error("${it.message}", null)
                 })
                 .addToDisposable()
